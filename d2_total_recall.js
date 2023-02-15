@@ -130,7 +130,7 @@
 
 // // Do the following and console.log the final results -->
 
-// //? 1. use the .sort method Thought question: what did this 
+// //? 1. use the .sort method Thought question: what did this
 // //? do to the array? Did it permanently alter it?
 // favMovies.sort();
 // console.log(favMovies);
@@ -155,20 +155,20 @@
 
 // //? 6. unshift - what does it return?
 // console.log(favMovies.unshift("JoJo Rabbit"));
-// // by using console log we see that unshift returns the length 
+// // by using console log we see that unshift returns the length
 // // of the changed array now that we have added a new movie
 // console.log(favMovies);
 
-// //? 7. splice "Django Unchained" and add "Avatar" (try finding 
-// //? the index of "Django Unchained", instead of counting it yourself) 
+// //? 7. splice "Django Unchained" and add "Avatar" (try finding
+// //? the index of "Django Unchained", instead of counting it yourself)
 // //? Thought question: did this permanently alter our array?
 // let index = favMovies.indexOf("Django Unchained");
 // favMovies.splice(index, 1, "Avatar")
 // // This permanently altered the original array
 // console.log(favMovies);
 
-// //? 8. slice the last half of the array (challenge yourself and try to 
-// //? programmatically determine the middle of the array rather than counting 
+// //? 8. slice the last half of the array (challenge yourself and try to
+// //? programmatically determine the middle of the array rather than counting
 // //? it and hard coding it) - Thought question: did this permanently alter our array?
 // middleIndex = Math.ceil(favMovies.length / 2);
 
@@ -179,7 +179,7 @@
 // // The original array was not modified
 // console.log(favMovies);
 
-// //? 9. store the value of your slice in a variable, console.log 
+// //? 9. store the value of your slice in a variable, console.log
 // //? it - Thought question: what is going on here?
 // // I have already done this - created the variable halvedFavMovies
 // // We have created a new, separate, array
@@ -187,16 +187,16 @@
 // //? 10. console.log your final results
 // // I have done this, above.
 
-// //? 11. After running the above tasks, console.log the index of "Fast and 
-// //? Furious" - We removed it from the array, what value do we get when we look 
+// //? 11. After running the above tasks, console.log the index of "Fast and
+// //? Furious" - We removed it from the array, what value do we get when we look
 // //? for the index of something that is not in the array?
 // console.log(halvedFavMovies.indexOf("Fast and Furious"));
 // // We get -1 as the result, because that element wasn't found in the array
 
-// //? 12. Thought question: that we declared the variable favMovies with const, and 
+// //? 12. Thought question: that we declared the variable favMovies with const, and
 // //? yet, we were allowed to change the array. Weird? Should we have used let?
-// // This is because we did not change the ARRAY - we changed 
-// // the elements INSIDE the array. If a constant is an object 
+// // This is because we did not change the ARRAY - we changed
+// // the elements INSIDE the array. If a constant is an object
 // // or array its properties or items can be updated or removed.
 
 // // -------- The commit message should read: "Methods Revisited answered" -------------
@@ -204,29 +204,66 @@
 //& ------------------------------
 
 //& Where is Waldo
-// With the following multi-dimensional array:
+// // With the following multi-dimensional array:
 
-const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
-                    ["Lucinda", "Jacc", "Neff", "Snoop"],
-                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+//                     ["Lucinda", "Jacc", "Neff", "Snoop"],
+//                     ["Petunia", ["Baked Goods", "Waldo"]]];
 
-// Remove Eggbert (hint look at the slice/splice method(s))
-whereIsWaldo.splice(1, 1)
-console.log(whereIsWaldo);
+// // Remove Eggbert (hint look at the slice/splice method(s))
+// whereIsWaldo.splice(1, 1)
+// console.log(whereIsWaldo);
 
-// Change "Neff" to "No One"
-whereIsWaldo[1][2] = "No One"
-console.log(whereIsWaldo);
+// // Change "Neff" to "No One"
+// whereIsWaldo[1][2] = "No One"
+// console.log(whereIsWaldo);
 
-// Access and console.log "Waldo"
-let waldo = whereIsWaldo[2][1][1];
-console.log(waldo);
+// // Access and console.log "Waldo"
+// let waldo = whereIsWaldo[2][1][1];
+// console.log(waldo);
 
-// The commit message should read: "Where is Waldo answered"
+// // The commit message should read: "Where is Waldo answered"
 
 //& ------------------------------
 
 //& Excited Kitten
+// // Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+// // For every even number in your loop, log "...human...why you
+// // taking pictures of me?...", "...the catnip made me do it...",
+// // or "...why does the red dot always get away..." at random.
+
+// // My first attempt
+// for (let i = 1; i <= 20; i++) {
+//   console.log(i + "| Love me, pet me! HSSSSSS!");
+//   if (i % 2 === 0) {
+//     let message = Math.ceil(Math.random() * 3);
+//     if (message === 1) {
+//       console.log("...human...why you taking pictures of me?...");
+//     } else if (message === 2) {
+//       console.log("...the catnip made me do it...");
+//     } else {
+//       console.log("...why does the red dot always get away...");
+//     }
+//   }
+// }
+
+// Second attempt after reading hints
+let kittyPhrase = [
+  "...human...why you taking pictures of me?...",
+  "...the catnip made me do it...",
+  "...why does the red dot always get away...",
+];
+
+for (let i = 1; i <= 20; i++) {
+    console.log(i + "| Love me, pet me! HSSSSSS!");
+    if (i % 2 === 0) {
+        let randomIndex = Math.floor(Math.random()*3)
+        console.log(kittyPhrase[randomIndex]);
+    }
+}
+
+// The commit message should read: "Excited Kittens answered"
+
 //& ------------------------------
 
 //& Find the Median

@@ -247,24 +247,55 @@
 //   }
 // }
 
-// Second attempt after reading hints
-let kittyPhrase = [
-  "...human...why you taking pictures of me?...",
-  "...the catnip made me do it...",
-  "...why does the red dot always get away...",
-];
+// // Second attempt after reading hints
+// let kittyPhrase = [
+//   "...human...why you taking pictures of me?...",
+//   "...the catnip made me do it...",
+//   "...why does the red dot always get away...",
+// ];
 
-for (let i = 1; i <= 20; i++) {
-    console.log(i + "| Love me, pet me! HSSSSSS!");
-    if (i % 2 === 0) {
-        let randomIndex = Math.floor(Math.random()*3)
-        console.log(kittyPhrase[randomIndex]);
-    }
-}
+// for (let i = 1; i <= 20; i++) {
+//     console.log(i + "| Love me, pet me! HSSSSSS!");
+//     if (i % 2 === 0) {
+//         let randomIndex = Math.floor(Math.random()*3)
+//         console.log(kittyPhrase[randomIndex]);
+//     }
+// }
 
-// The commit message should read: "Excited Kittens answered"
+// // The commit message should read: "Excited Kittens answered"
 
 //& ------------------------------
 
 //& Find the Median
+
+// Find the median number in the following nums array, then console.log that number.
+// Hint - if you check the length of the array / 2, you might get not get a whole 
+// number. In which case, look into Math.floor( // something )
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+// Expected output:
+// => 15
+
+// Sort the array so the numbers are in ascending order
+nums.sort(); // I believe all numbers must have same amount of digits for this to work 
+             // (this method works just fine for the above 2 digit num array)
+console.log(nums);
+
+// Find the index of the median
+// If the array length is odd
+if (nums.length % 2 !== 0) {
+    let medianIndex = Math.ceil(nums.length / 2);
+    let median = nums[medianIndex];
+    console.log(median);
+// If the array length is even (not needed for this problem, but fun to show)
+} else {
+    // we need to find the indexes of the two numbers in the middle of the array
+    let secondMidPointIndex = nums.length / 2 
+    let firstMidPointIndex = secondMidPointIndex - 1;
+    let median = (nums[firstMidPointIndex] + nums[secondMidPointIndex]) / 2;
+    console.log(median);
+}
+
+// The commit message should read: "Find the Median answered"
+
 //& ------------------------------

@@ -268,34 +268,103 @@
 
 //& Find the Median
 
-// Find the median number in the following nums array, then console.log that number.
-// Hint - if you check the length of the array / 2, you might get not get a whole 
-// number. In which case, look into Math.floor( // something )
+// // Find the median number in the following nums array, then console.log that number.
+// // Hint - if you check the length of the array / 2, you might get not get a whole 
+// // number. In which case, look into Math.floor( // something )
 
-const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-// Expected output:
-// => 15
+// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+// // Expected output:
+// // => 15
 
-// Sort the array so the numbers are in ascending order
-nums.sort(); // I believe all numbers must have same amount of digits for this to work 
-             // (this method works just fine for the above 2 digit num array)
-console.log(nums);
+// // Sort the array so the numbers are in ascending order
+// nums.sort(); // I believe all numbers must have same amount of digits for this to work 
+//              // (this method works just fine for the above 2 digit num array)
+// console.log(nums);
 
-// Find the index of the median
-// If the array length is odd
-if (nums.length % 2 !== 0) {
-    let medianIndex = Math.ceil(nums.length / 2);
-    let median = nums[medianIndex];
-    console.log(median);
-// If the array length is even (not needed for this problem, but fun to show)
-} else {
-    // we need to find the indexes of the two numbers in the middle of the array
-    let secondMidPointIndex = nums.length / 2 
-    let firstMidPointIndex = secondMidPointIndex - 1;
-    let median = (nums[firstMidPointIndex] + nums[secondMidPointIndex]) / 2;
-    console.log(median);
-}
+// // Find the index of the median
+// // If the array length is odd
+// if (nums.length % 2 !== 0) {
+//     let medianIndex = Math.ceil(nums.length / 2);
+//     let median = nums[medianIndex];
+//     console.log(median);
+// // If the array length is even (not needed for this problem, but fun to show)
+// } else {
+//     // we need to find the indexes of the two numbers in the middle of the array
+//     let secondMidPointIndex = nums.length / 2 
+//     let firstMidPointIndex = secondMidPointIndex - 1;
+//     let median = (nums[firstMidPointIndex] + nums[secondMidPointIndex]) / 2;
+//     console.log(median);
+// }
 
-// The commit message should read: "Find the Median answered"
+// // The commit message should read: "Find the Median answered"
 
 //& ------------------------------
+
+//!----------------------------------------------------------------------------------------------
+//! EXTRA QUESTIONS
+//!----------------------------------------------------------------------------------------------
+
+//& Return of the Closets
+// Below, we've given you examples of Kristyn and Thom's 
+// closets modeled as data in JavaScript. Use this data 
+// to answer the following questions.
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+//? Alien Attire
+// Kristyn's left shoe has traveled through time and space and turned up in 
+// Thom's accessories drawer! Remove Kristyn's shoe from the array and save 
+// it to the variable kristynsShoe. Use that variable to add Kristyn's lost 
+// shoe to Thom's accessories array.
+
+const kristynsShoe = kristynsCloset.shift();
+thomsCloset[2].push(kristynsShoe);
+
+console.log(kristynsCloset);
+console.log(thomsCloset);
+
+//? Dress Us Up
+// Modify your code to put together 3 separate outfits for Kristyn and Thom. 
+// Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+function createOutfit(pants, shirt, accessory) {
+    this.pants = pants;
+    this.shirt = shirt;
+    this.accessory = accessory;
+    console.log(`Today you'll be wearing ${this.pants}, ${this.shirt}, and ${this.accessory}.`);
+}
+
+createOutfit(kristynsCloset[3], kristynsCloset[2], kristynsCloset[4]);
+createOutfit(thomsCloset[1][1], thomsCloset[0][1], thomsCloset[2][3])
+createOutfit(kristynsCloset[0], thomsCloset[1][2], thomsCloset[2][2])
+
+// The commit message should read: "Kristyn and Thom have their outfits ready for class - array practice"

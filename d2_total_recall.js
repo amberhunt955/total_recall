@@ -1,3 +1,5 @@
+// https://perscholas.instructure.com/courses/1297/pages/week-4-day-3-lecture-arrays-loops-and-conditional-reps?module_item_id=776630
+
 //& Easy Going
 // // Write a for loop that will log the numbers 1 through 20.
 // // The commit message should read: "Easy Going answered"

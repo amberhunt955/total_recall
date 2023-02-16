@@ -155,43 +155,43 @@
 
 //? Chef Make Dinners
 
-// Dinner class - objects of the dinner class are three course meal dinner options
-class Dinner {
-    constructor(appetizer, entree, dessert) {
-        this.appetizer = appetizer
-        this.entree = entree
-        this.dessert = dessert
-    }
-}
+// // Dinner class - objects of the dinner class are three course meal dinner options
+// class Dinner {
+//     constructor(appetizer, entree, dessert) {
+//         this.appetizer = appetizer
+//         this.entree = entree
+//         this.dessert = dessert
+//     }
+// }
 
-// Chef factory class
-class Chef {
-    recipeBook = [];
+// // Chef factory class
+// class Chef {
+//     recipeBook = [];
 
-    cook(appetizer, entree, dessert) {
-        // the chef cooks a meal
-        const threeCourseMeal = new Dinner(appetizer, entree, dessert);
-        // add the meal to the chef's recipe book
-        this.recipeBook.push(threeCourseMeal);
-        // return the meal
-        return threeCourseMeal;
-    }
-}
+//     cook(appetizer, entree, dessert) {
+//         // the chef cooks a meal
+//         const threeCourseMeal = new Dinner(appetizer, entree, dessert);
+//         // add the meal to the chef's recipe book
+//         this.recipeBook.push(threeCourseMeal);
+//         // return the meal
+//         return threeCourseMeal;
+//     }
+// }
 
-// Create amber, an instance of chef
-const amber = new Chef;
+// // Create amber, an instance of chef
+// const amber = new Chef;
 
-// Have amber cook 3 meals and save each to a variable representing a dinner option
-const dinnerOption1 = amber.cook("cheese board", "pasta", "chocolate cake");
-const dinnerOption2 = amber.cook("fried pickles", "cheeseburger", "ice cream");
-const dinnerOption3 = amber.cook("chips and salsa", "tacos al pastor", "flan");
+// // Have amber cook 3 meals and save each to a variable representing a dinner option
+// const dinnerOption1 = amber.cook("cheese board", "pasta", "chocolate cake");
+// const dinnerOption2 = amber.cook("fried pickles", "cheeseburger", "ice cream");
+// const dinnerOption3 = amber.cook("chips and salsa", "tacos al pastor", "flan");
 
-// Console log amber's dinner option meals
-console.log(dinnerOption1);
-console.log(dinnerOption2);
-console.log(dinnerOption3);
+// // Console log amber's dinner option meals
+// console.log(dinnerOption1);
+// console.log(dinnerOption2);
+// console.log(dinnerOption3);
 
-// Console log amber's recipe book
-console.log(amber.recipeBook);
+// // Console log amber's recipe book
+// console.log(amber.recipeBook);
 
-// Your commit message should read something like: "Dinner is served" 
+// // Your commit message should read something like: "Dinner is served" 

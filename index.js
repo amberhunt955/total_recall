@@ -711,7 +711,7 @@ going to solve a problem vs actually typing in code to solve it?
 
 // // //* Cat Combinator
 
-// //? 1. Mama cat
+//? 1. Mama cat
 // // Define an object called cat1 that contains the following properties:
 //   // name
 //   // breed
@@ -752,6 +752,8 @@ going to solve a problem vs actually typing in code to solve it?
 // // breeds with a hyphen in between.
 
 // function combineCats(mama, papa) {
+//   console.log(mama);
+//   console.log(papa);
 //   const comboCat = {
 //     name: mama.name + papa.name,
 //     age: 1,

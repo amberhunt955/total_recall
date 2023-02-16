@@ -68,4 +68,87 @@ class Person {
     }
   }
 
-  // Your commit message should read something like: "created person class"
+// Your commit message should read something like: "created person class"
+
+//? Create a story with your person class
+// Feel free to update or add methods to automate some of these tasks.
+
+//* 1. Instantiate a new Person named Timmy
+
+const timmy = new Person("Timmy");
+console.log(timmy);
+
+//* 2. Age Timmy five years
+
+for (let i = 1; i <= 5; i++) {
+    timmy.ageUp();
+}
+
+console.log(timmy);
+
+//* 3. At this point Timmy's a little bummed. As a precocious child, he feels 
+//* he's "seen it all" already. Have him eat five times.
+
+for (let i = 1; i <= 5; i++) {
+    timmy.eat();
+}
+
+console.log(timmy);
+
+//* 4. Now Timmy's a little heavier than he wants to be. Kindergarten's coming 
+//* up and he wants to look good. Have him exercise five times
+
+for (let i = 1; i <= 5; i++) {
+    timmy.exercise();
+}
+
+console.log(timmy);
+
+//* 5. Age Timmy 9 years
+
+for (let i = 1; i <= 9; i++) {
+    timmy.ageUp();
+}
+
+console.log(timmy);
+
+//* 6. Create a hamster named "Gus"
+
+const gus = new Hamster("Gus");
+console.log(gus);
+
+//* 7. Set Gus's owner to the string "Timmy"
+
+gus.owner = "Timmy";
+console.log(gus);
+
+//* 8. Have Timmy "buy" Gus
+
+timmy.buyHamster(gus);
+console.log(timmy);
+
+//* 9 Age Timmy 15 years
+
+for (let i = 1; i <= 15; i++) {
+    timmy.ageUp();
+}
+
+console.log(timmy);
+
+//* 10. Have Timmy eat twice
+
+for (let i = 1; i <= 2; i++) {
+    timmy.eat();
+}
+
+console.log(timmy);
+
+//* 11. Have Timmy exercise twice
+
+for (let i = 1; i <= 2; i++) {
+    timmy.exercise();
+}
+
+console.log(timmy);
+
+// Your commit message should read something like: "created timmys story"
